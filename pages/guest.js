@@ -1,4 +1,12 @@
-import { Box, Heading, chakra, Text, Input, Select } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  chakra,
+  Text,
+  Input,
+  Select,
+  Checkbox,
+} from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import FooterComponent from "../components/Footer";
 import BackgroundTitle from "../components/BackgroundTitle";
@@ -33,79 +41,126 @@ const PlayAsGuest = () => {
           bgColor={"#F6F6F6"}
         >
           <form action="">
-            <ul display="flex">
-              <li>
+            <Box justifyContent={"space-between"} display="flex" flexWrap={"wrap"} gap="2rem">
+              <Input
+                placeholder="Amount"
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                bgColor="white"
+                type={"number"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+              <Select
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                bgColor="white"
+                placeholder="Transaction Type"
+                mb="3rem"
+                color={"#A7A7A7"}
+                focusBorderColor="nairagreen"
+              >
+                <option value="credit">Credit</option>
+                <option value="debit">Debit</option>
+              </Select>
+              <Input
+                placeholder="First Name"
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                color={"#A7A7A7"}
+                bgColor="white"
+                type={"text"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+              <Select
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                bgColor="white"
+                placeholder="Make My Cashback Payout To"
+                mb="3rem"
+                color={"#A7A7A7"}
+                focusBorderColor="nairagreen"
+              >
+                <option value="credit">Credit</option>
+                <option value="debit">Debit</option>
+              </Select>
+
+              <Input
+                placeholder="Last Name"
+                w="25.125rem"
+                h="4.8rem"
+                color={"#A7A7A7"}
+                border={"none"}
+                bgColor="white"
+                type={"text"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+              <Input
+                placeholder="Account Number"
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                color={"#A7A7A7"}
+                bgColor="white"
+                type={"number"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+              <Input
+                placeholder="Phone Number"
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                color={"#A7A7A7"}
+                bgColor="white"
+                type={"tel"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+
+              <Input
+                placeholder="Choose Lucky Time(24hr format)"
+                w="25.125rem"
+                h="4.8rem"
+                border={"none"}
+                color={"#A7A7A7"}
+                _before={{ content: `"Choose Lucky Time(24hr format)"`, postion: "absolute", width:"100%" }}
+                
+                bgColor="white"
+                type={"time"}
+                _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
+                mb="3rem"
+                focusBorderColor="nairagreen"
+              />
+              <Box margin={"auto"} alignItems="center" display={"flex"} flexDir="column">
                 <Input
-                  placeholder="Amount"
+                  placeholder="Boost Code(if any)"
                   w="25.125rem"
                   h="4.8rem"
                   border={"none"}
+                  color={"#A7A7A7"}
                   bgColor="white"
-                  type={"number"}
+                  type={"text"}
                   _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
                   mb="3rem"
                   focusBorderColor="nairagreen"
                 />
-              </li>
-              <li>
-                <Input
-                  placeholder="First Name"
-                  w="25.125rem"
-                  h="4.8rem"
-                  border={"none"}
-                  color={"#A7A7A7"}
-                  bgColor="white"
-                  type={"text"}
-                  _placeholder={{ fontSize: "16px" }}
-                  mb="3rem"
-                  focusBorderColor="nairagreen"
-                />
-              </li>
-              <li>
-                <Input
-                  placeholder="Last Name"
-                  w="25.125rem"
-                  h="4.8rem"
-                  color={"#A7A7A7"}
-                  border={"none"}
-                  bgColor="white"
-                  type={"text"}
-                  _placeholder={{ fontSize: "16px" }}
-                  mb="3rem"
-                  focusBorderColor="nairagreen"
-                />
-              </li>
-              <li>
-                <Input
-                  placeholder="Phone Number"
-                  w="25.125rem"
-                  h="4.8rem"
-                  border={"none"}
-                  color={"#A7A7A7"}
-                  bgColor="white"
-                  type={"tel"}
-                  _placeholder={{ fontSize: "16px" }}
-                  mb="3rem"
-                  focusBorderColor="nairagreen"
-                />
-              </li>
-              <li>
-                <Select
-                  w="25.125rem"
-                  h="4.8rem"
-                  border={"none"}
-                  bgColor="white"
-                  placeholder="Transaction Type"
-                  mb="3rem"
-                  color={"#A7A7A7"}
-                  focusBorderColor="nairagreen"
-                >
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                </Select>
-              </li>
-              <li>
+
+                <Checkbox mb="5rem" colorScheme={"green"} color="#A7A7A7">
+                  I agree to the terms and conditions
+                </Checkbox>
+
                 <Input
                   value={"Proceed"}
                   border={"none"}
@@ -115,11 +170,11 @@ const PlayAsGuest = () => {
                   type={"submit"}
                   fontWeight={600}
                   fontSize="lg"
-                  mb="5rem"
+                  mb="4.5rem"
                   cursor={"pointer"}
                 />
-              </li>
-            </ul>
+              </Box>
+            </Box>
           </form>
         </Box>
       </Box>

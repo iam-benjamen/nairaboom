@@ -95,7 +95,7 @@ const RegisterPage = () => {
                   mb="3rem"
                   focusBorderColor ="nairagreen"
                 />
-                <Checkbox>Remember me</Checkbox>
+                <Checkbox colorScheme={"green"}>Remember me</Checkbox>
                 <chakra.span
                   mb="6rem"
                   float={"right"}
