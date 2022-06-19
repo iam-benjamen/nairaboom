@@ -135,8 +135,8 @@ const PlayAsGuest = () => {
                 h="4.8rem"
                 border={"none"}
                 color={"#A7A7A7"}
-                _before={{ content: `"Choose Lucky Time(24hr format)"`, postion: "absolute", width:"100%" }}
-                
+                _before={{ content: `"Choose Lucky Time(24hr format)"`, postion: "absolute", width:"100%", fontSize:"sm" }}
+                _focus={{_before:{content:`""`, w:0}}}
                 bgColor="white"
                 type={"time"}
                 _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
