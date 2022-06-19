@@ -18,7 +18,6 @@ import { useState } from "react";
 
 const RegisterPage = () => {
   const bgies = [loginbg, signupbg];
-
   const [bgImage, setbgImage] = useState(0);
   const bg = bgies[bgImage];
 
@@ -107,7 +106,7 @@ const RegisterPage = () => {
                 </chakra.span>
                 <Input
                   value={"Log In"}
-                  w="27.5rem"
+                  w="100%"
                   border={"none"}
                   color="white"
                   bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
@@ -179,7 +178,7 @@ const RegisterPage = () => {
                 />
                 <Input
                   value={"Register"}
-                  w="27.5rem"
+                  w="100%"
                   border={"none"}
                   color="white"
                   bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
