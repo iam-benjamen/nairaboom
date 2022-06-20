@@ -41,7 +41,12 @@ const PlayAsGuest = () => {
           bgColor={"#F6F6F6"}
         >
           <form action="">
-            <Box justifyContent={"space-between"} display="flex" flexWrap={"wrap"} gap="2rem">
+            <Box
+              justifyContent={"space-between"}
+              display="flex"
+              flexWrap={"wrap"}
+              gap="2rem"
+            >
               <Input
                 placeholder="Amount"
                 w="25.125rem"
@@ -135,15 +140,25 @@ const PlayAsGuest = () => {
                 h="4.8rem"
                 border={"none"}
                 color={"#A7A7A7"}
-                _before={{ content: `"Choose Lucky Time(24hr format)"`, postion: "absolute", width:"100%", fontSize:"sm" }}
-                _focus={{_before:{content:`""`, w:0}}}
+                _before={{
+                  content: `"Choose Lucky Time(24hr format)"`,
+                  postion: "absolute",
+                  width: "100%",
+                  fontSize: "sm",
+                }}
+                _focus={{ _before: { content: `""`, w: 0 } }}
                 bgColor="white"
                 type={"time"}
                 _placeholder={{ fontSize: "16px", color: "#A7A7A7" }}
                 mb="3rem"
                 focusBorderColor="nairagreen"
               />
-              <Box margin={"auto"} alignItems="center" display={"flex"} flexDir="column">
+              <Box
+                margin={"auto"}
+                alignItems="center"
+                display={"flex"}
+                flexDir="column"
+              >
                 <Input
                   placeholder="Boost Code(if any)"
                   w="25.125rem"

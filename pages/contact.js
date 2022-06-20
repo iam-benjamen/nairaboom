@@ -10,7 +10,6 @@ import {
 import NavBar from "../components/NavBar";
 import FooterComponent from "../components/Footer";
 import Image from "next/image";
-
 import NextLink from "next/link";
 import coil2 from "../public/contactpage/coil2.png";
 import coil from "../public/contactpage/coil.png";
@@ -18,6 +17,7 @@ import ladycalling from "../public/contactpage/ladycalls.svg";
 import call from "../public/contactpage/call.png";
 import email from "../public/contactpage/email.png";
 import BackgroundTitle from "../components/BackgroundTitle";
+import Getstarted from "../components/Getstarted";
 
 const ContactPage = () => {
   return (
@@ -139,45 +139,7 @@ const ContactPage = () => {
           </form>
         </Box>
       </Box>
-      <Box
-        bgColor={"nairablue"}
-        display="flex"
-        fontFamily={"poppins"}
-        py="6.5rem"
-        justifyContent={"center"}
-        gap="5rem"
-        alignItems={"center"}
-        mb="12.5rem"
-      >
-        <Box
-          display={"flex"}
-          flexDir="column"
-          alignItems="flex-start"
-          fontFamily={"poppins"}
-          w="30%"
-          gap="1rem"
-        >
-          <Text color={"nairagreen"} fontSize="20px">
-            Enjoy Daily and Monthly Giveaways
-          </Text>
-          <Text color={"white"} fontSize="md">
-            Be eligible to enjoy 500% cashback on A.T.M withdrawals. what are
-            you waiting for?
-          </Text>
-        </Box>
-        <NextLink href={"/"} passHref>
-          <Link
-            bgColor={"nairagreen"}
-            color="white"
-            fontWeight={600}
-            fontSize="lg"
-            p=".8rem 6rem"
-            borderRadius={"md"}
-          >
-            Get Started
-          </Link>
-        </NextLink>
-      </Box>
+      <Getstarted/>
       <FooterComponent />
     </Box>
   );

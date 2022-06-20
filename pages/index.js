@@ -18,12 +18,15 @@ import reason1 from "../public/homepage/reasons1.svg";
 import reason2 from "../public/homepage/reason2.svg";
 import reason3 from "../public/homepage/reason3.svg";
 import reason4 from "../public/homepage/reason4.svg";
+import rightellipse from "../public/navassets/rightellipse.png";
+import leftellipse from "../public/navassets/leftellipse.png";
+
 
 export default function Home() {
   const options = [
     ["Play with profile", "/"],
     ["Play from ATM", "/cashback-atm"],
-    ["Cashout", "/log"],
+    ["Cashout", "/cashout"],
   ];
   return (
     <div>
@@ -236,6 +239,9 @@ export default function Home() {
         justifyContent={"center"}
         gap="5rem"
         alignItems={"center"}
+        backgroundImage={`url(${rightellipse.src}), url(${leftellipse.src})`}
+        backgroundPosition="right center, left center"
+        backgroundRepeat="no-repeat"
       >
         <Box display={"flex"} alignItems="center">
           <Box as={Link}>
