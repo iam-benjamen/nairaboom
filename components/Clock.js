@@ -6,6 +6,7 @@ const Clock = () => {
   const minute = "30";
   const second = "50";
   const percentage = "70%";
+
   return (
     <Box
       w="46.75rem"
@@ -16,7 +17,12 @@ const Clock = () => {
       fontFamily={"poppins"}
     >
       <Box py="4rem" display={"flex"} flexDir="column" alignItems={"center"}>
-        <Text letterSpacing={"0.15em"} fontSize={"3.43rem"} color={"nairagreen"} fontWeight={700}>
+        <Text
+          letterSpacing={"0.15em"}
+          fontSize={"3.43rem"}
+          color={"nairagreen"}
+          fontWeight={700}
+        >
           {`${hour}  :  ${minute}  :  ${second}  :  ${percentage}`}
         </Text>
         <Box color="white" display={"flex"} gap="5.5rem">

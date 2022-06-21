@@ -6,6 +6,7 @@ import background from "../public/aboutpage/background.png";
 import coil from "../public/cashback-atm/coil.png";
 import coil2 from "../public/cashback-atm/coil2.png";
 import BackgroundTitle from "../components/BackgroundTitle";
+import Getstarted from "../components/Getstarted";
 
 const CashBackATM = () => {
   const instructArray = [
@@ -107,45 +108,7 @@ const CashBackATM = () => {
           </Box>
         </Box>
       </Box>
-      <Box
-        bgColor={"nairablue"}
-        display="flex"
-        fontFamily={"poppins"}
-        py="6.5rem"
-        justifyContent={"center"}
-        gap="5rem"
-        alignItems={"center"}
-        mb="10.5rem"
-      >
-        <Box
-          display={"flex"}
-          flexDir="column"
-          alignItems="flex-start"
-          fontFamily={"poppins"}
-          w="30%"
-          gap="1rem"
-        >
-          <Text color={"nairagreen"} fontSize="20px">
-            Enjoy Daily and Monthly Giveaways
-          </Text>
-          <Text color={"white"} fontSize="md">
-            Be eligible to enjoy 500% cashback on A.T.M withdrawals. what are
-            you waiting for?
-          </Text>
-        </Box>
-        <NextLink href={"/"} passHref>
-          <Link
-            bgColor={"nairagreen"}
-            color="white"
-            fontWeight={600}
-            fontSize="lg"
-            p=".8rem 6rem"
-            borderRadius={"md"}
-          >
-            Get Started
-          </Link>
-        </NextLink>
-      </Box>
+     <Getstarted/>
       <FooterComponent />
     </Box>
   );

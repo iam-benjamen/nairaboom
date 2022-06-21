@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import FooterComponent from "../components/Footer";
-import background from "../public/aboutpage/background.png";
 import Image from "next/image";
 import picture2 from "../public/homepage-secondpic.svg";
 import reason4 from "../public/homepage/reason4.svg";

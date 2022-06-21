@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, Heading, Text, Link, Circle } from "@chakra-ui/react";
+import { Box, Heading, Text, Link } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import FooterComponent from "../components/Footer";
 import CashBack from "../components/CashBackMethod";
@@ -24,7 +24,7 @@ import leftellipse from "../public/navassets/leftellipse.png";
 
 export default function Home() {
   const options = [
-    ["Play with profile", "/"],
+    ["Play with profile", "/register"],
     ["Play from ATM", "/cashback-atm"],
     ["Cashout", "/cashout"],
   ];

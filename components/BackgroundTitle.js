@@ -18,6 +18,8 @@ const BackgroundTitle = (props) => {
           fontSize={"4rem"}
           fontWeight={700}
           fontFamily={"poppins"}
+          maxW="37rem"
+          textAlign={"center"}
         >
           {props.longbit}
           <chakra.span

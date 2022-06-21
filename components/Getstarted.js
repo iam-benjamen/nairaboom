@@ -42,6 +42,8 @@ const Getstarted = () => {
           fontSize="lg"
           p=".8rem 6rem"
           borderRadius={"md"}
+          transitionDuration={".3s"}
+          _hover={{ transform: "scale(1.02)" }}
         >
           Get Started
         </Link>

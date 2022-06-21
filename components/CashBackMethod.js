@@ -1,4 +1,4 @@
-import { Box, Circle, Text, Heading } from "@chakra-ui/react";
+import { Box, Circle, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const CashBack = (props) => {
@@ -10,6 +10,7 @@ const CashBack = (props) => {
       borderRadius={"24px"}
       pb="4rem"
       boxShadow={"md"}
+      _hover={{boxShadow:"lg"}}
     >
       <Circle size="40px" top={0} left={0} bgColor="white">
         <Circle size="20px" bgColor={"#f6f6f6"}>
