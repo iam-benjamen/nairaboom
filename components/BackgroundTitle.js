@@ -15,7 +15,7 @@ const BackgroundTitle = (props) => {
       >
         <Heading
           color={"nairablue"}
-          fontSize={"4rem"}
+          fontSize={{base:"3rem", md:"4rem"}}
           fontWeight={700}
           fontFamily={"poppins"}
           maxW="37rem"

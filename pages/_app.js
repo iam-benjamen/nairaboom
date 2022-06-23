@@ -6,8 +6,13 @@ const colors = {
   nairagreen: "#1ED760",
   nairablue: "#002047",
 };
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '1024px',
+}
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({ colors, breakpoints });
 
 function MyApp({ Component, pageProps }) {
   return (

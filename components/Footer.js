@@ -10,9 +10,13 @@ const FooterComponent = () => {
   return (
     <Box
       display={"flex"}
+      flexDir={{ base: "column", md: "row" }}
       bgColor="nairablue"
-      h={"35rem"}
+      h={"max-content"}
+      pt="5rem"
+      pb={{base:"5rem", md:"8rem"}}
       bottom={0}
+      gap={{ base: "5rem", md: "0" }}
       fontFamily="poppins"
       alignItems={"center"}
       justifyContent="space-evenly"
@@ -21,7 +25,7 @@ const FooterComponent = () => {
         display={"flex"}
         gap="2rem"
         flexDir="column"
-        w="30%"
+        w={{ base: "80%", md: "30%" }}
         alignItems={"flex-start"}
       >
         <Image src={logo} alt="footer logo" />
@@ -44,51 +48,59 @@ const FooterComponent = () => {
         </Box>
         <Text color={"#9E9E9E"}>2022 9ja Cashback. All Right Reserved</Text>
       </Box>
-      <Box display={"flex"} flexDir="column" gap="1rem">
-        <Text
-          fontFamily="poppins"
-          color={"white"}
-          fontWeight={700}
-          fontSize="xl"
-        >
-          Quicks Links
-        </Text>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"} pt="1.5rem">
-            Home
-          </Link>
-        </NextLink>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"}>Blog</Link>
-        </NextLink>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"} pb="6rem">
-            Check my number
-          </Link>
-        </NextLink>
-      </Box>
-      <Box display={"flex"} flexDir="column" gap="1rem">
-        <Text
-          fontFamily="poppins"
-          color={"white"}
-          fontWeight={700}
-          fontSize="xl"
-        >
-          Legal
-        </Text>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"} pt="1.5rem">
-            Terms and conditions
-          </Link>
-        </NextLink>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"}>Privacy policy</Link>
-        </NextLink>
-        <NextLink href={"/"} passHref>
-          <Link color={"#9E9E9E"} pb="6rem">
-            FAQ
-          </Link>
-        </NextLink>
+      <Box
+        w={{ base: "85%", md: "max-content" }}
+        justifyContent={{ base: "space-between", md: "center" }}
+        display={"flex"}
+        gap={{ base: "0", md:"7rem",lg: "14rem" }}
+        flexDir={{base:"column", sm:"row"}}
+      >
+        <Box display={"flex"} flexDir="column" gap="1rem">
+          <Text
+            fontFamily="poppins"
+            color={"white"}
+            fontWeight={700}
+            fontSize="xl"
+          >
+            Quicks Links
+          </Text>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"} pt="1.5rem">
+              Home
+            </Link>
+          </NextLink>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"}>Blog</Link>
+          </NextLink>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"} pb={{base:"2rem", md:"6rem"}}>
+              Check my number
+            </Link>
+          </NextLink>
+        </Box>
+        <Box display={"flex"} flexDir="column" gap="1rem">
+          <Text
+            fontFamily="poppins"
+            color={"white"}
+            fontWeight={700}
+            fontSize="xl"
+          >
+            Legal
+          </Text>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"} pt="1.5rem">
+              Terms & conditions
+            </Link>
+          </NextLink>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"}>Privacy policy</Link>
+          </NextLink>
+          <NextLink href={"/"} passHref>
+            <Link color={"#9E9E9E"} pb={{base:"2rem", md:"6rem"}}>
+              FAQ
+            </Link>
+          </NextLink>
+        </Box>
       </Box>
     </Box>
   );

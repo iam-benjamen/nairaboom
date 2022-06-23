@@ -8,14 +8,21 @@ const Getstarted = () => {
     <Box
       bgColor={"nairablue"}
       display="flex"
+      flexDir={{ base: "column", md: "row" }}
       fontFamily={"poppins"}
-      py="6.5rem"
+      py={{ base: "4rem", md: "6.5rem" }}
       justifyContent={"center"}
       gap="5rem"
       alignItems={"center"}
       mb="10.5rem"
-      backgroundImage={`url(${rightellipse.src}), url(${leftellipse.src})`}
-      backgroundPosition="right center, left center"
+      backgroundImage={{
+        base: `url(${rightellipse.src}), url(${leftellipse.src})`,
+        md: `url(${rightellipse.src}), url(${leftellipse.src})`,
+      }}
+      backgroundPosition={{
+        base: "right top, left center",
+        md: "right center, left center",
+      }}
       backgroundRepeat="no-repeat"
     >
       <Box
@@ -23,7 +30,7 @@ const Getstarted = () => {
         flexDir="column"
         alignItems="flex-start"
         fontFamily={"poppins"}
-        w="30%"
+        w={{ base: "60%", md: "30%" }}
         gap="1rem"
       >
         <Text color={"nairagreen"} fontSize="20px">
@@ -39,8 +46,9 @@ const Getstarted = () => {
           bgColor={"nairagreen"}
           color="white"
           fontWeight={600}
-          fontSize="lg"
-          p=".8rem 6rem"
+          fontSize="md"
+          py=".8rem"
+          px={{ base: "4rem", md: "6rem" }}
           borderRadius={"md"}
           transitionDuration={".3s"}
           _hover={{ transform: "scale(1.02)" }}
