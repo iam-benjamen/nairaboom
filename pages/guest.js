@@ -27,25 +27,34 @@ const PlayAsGuest = () => {
         flexDir={"column"}
         alignItems="center"
       >
-        <Text textAlign={"center"} fontWeight={500} fontSize="2rem" pb="6.1rem">
+        <Text
+          textAlign={"center"}
+          fontWeight={500}
+          fontSize={{ base: "1.5rem", lg: "2rem" }}
+          pb={{base:"4rem",md:"6.1rem"}}
+          w={{base:"80%", lg:"max-content"}}
+        >
           Wish to get cashback for your transaction?
           <br /> Fill the form below
         </Text>
         <Box
           mb="9.8rem"
           pt="7.3rem"
-          pl="10rem"
-          pr="11.5rem"
+          // pl="10rem"
+          // pr="11.5rem"
           w="90%"
           borderRadius={"2rem"}
           bgColor={"#F6F6F6"}
         >
           <form action="">
             <Box
-              justifyContent={"space-between"}
+              justifyContent={"space-evenly"}
+              alignItems="center"
               display="flex"
               flexWrap={"wrap"}
               gap="2rem"
+              w="95%"
+              margin={"auto"}
             >
               <Input
                 placeholder="Amount"
@@ -161,7 +170,7 @@ const PlayAsGuest = () => {
               >
                 <Input
                   placeholder="Boost Code(if any)"
-                  w="25.125rem"
+                  w={{ base: "100%", lg: "25.125rem" }}
                   h="4.8rem"
                   border={"none"}
                   color={"#A7A7A7"}
@@ -179,7 +188,7 @@ const PlayAsGuest = () => {
                 <Input
                   value={"Proceed"}
                   border={"none"}
-                  w="31.6rem"
+                  w={{ base: "100%", lg: "31.6rem" }}
                   color="white"
                   bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
                   type={"submit"}

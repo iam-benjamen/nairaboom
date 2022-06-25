@@ -33,7 +33,12 @@ const HowItWorks = () => {
         backgroundPosition="right center"
         backgroundRepeat="no-repeat"
       >
-        <Text textAlign={"center"} fontWeight={500} w="55%" margin={"auto"}>
+        <Text
+          textAlign={"center"}
+          fontWeight={500}
+          w={{ base: "80%", md: "55%" }}
+          margin={"auto"}
+        >
           Once you get a credit alert or a debit alert after any financial
           transaction, you can immediately head to{" "}
           <Link color={"nairagreen"} href="/">
@@ -54,9 +59,14 @@ const HowItWorks = () => {
         pt="5rem"
         pb="5.2rem"
       >
-        <Box display={"flex"} gap="12rem">
+        <Box
+          display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
+          gap={{ base: "2rem", md: "4rem", lg: "12rem" }}
+          alignItems="center"
+        >
           <Box
-            w="22rem"
+            w={{ base: "80%", md: "22rem" }}
             display={"flex"}
             flexDir="column"
             fontFamily={"poppins"}
@@ -83,7 +93,7 @@ const HowItWorks = () => {
             </Text>
           </Box>
           <Box
-            w="22rem"
+            w={{ base: "80%", md: "22rem" }}
             display={"flex"}
             flexDir="column"
             fontFamily={"poppins"}
@@ -106,9 +116,14 @@ const HowItWorks = () => {
             </Text>
           </Box>
         </Box>
-        <Box display={"flex"} gap="12rem">
+        <Box
+          display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
+          gap={{ base: "2rem", md: "4rem", lg: "12rem" }}
+          alignItems="center"
+        >
           <Box
-            w="22rem"
+            w={{ base: "80%", md: "22rem" }}
             display={"flex"}
             flexDir="column"
             fontFamily={"poppins"}
@@ -131,7 +146,7 @@ const HowItWorks = () => {
             </Text>
           </Box>
           <Box
-            w="22rem"
+            w={{ base: "80%", md: "22rem" }}
             display={"flex"}
             flexDir="column"
             fontFamily={"poppins"}
@@ -163,7 +178,7 @@ const HowItWorks = () => {
         display={"flex"}
         flexDir="column"
         alignItems={"center"}
-        px="6rem"
+        px={{ base: "2rem", lg: "6rem" }}
         bgColor={"white"}
       >
         <Heading fontFamily={"poppins"} pb="5rem">
@@ -243,7 +258,7 @@ const HowItWorks = () => {
       >
         <Heading
           fontFamily={"poppins"}
-          fontSize={"2.5rem"}
+          fontSize={{ base: "2rem", md: "2.5rem" }}
           fontWeight={700}
           color="white"
         >
@@ -252,6 +267,7 @@ const HowItWorks = () => {
         <Box
           mt="7.3rem"
           display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
           bgColor="rgba(255, 255, 255, 0.03)"
           alignItems={"center"}
           w="80%"
@@ -259,7 +275,14 @@ const HowItWorks = () => {
           borderRadius="2rem"
         >
           <Image src={number1} alt="number 1" />
-          <Box display={"flex"} flexDir="column" gap="2rem" w="65%" pr="2rem">
+          <Box
+            display={"flex"}
+            flexDir="column"
+            gap="2rem"
+            w={{ base: "85%", md: "65%" }}
+            pr={{ base: "0", md: "2rem" }}
+            py="1rem"
+          >
             <Text color="white" fontSize={"xl"}>
               If you match all 3 time units ( Hours, Mins & Secs) for either
               your Credit alert or Debit alert, you immediately get double your
@@ -282,15 +305,22 @@ const HowItWorks = () => {
         <Box
           mt="6.6rem"
           display={"flex"}
+          flexDir={{ base: "column", md: "row-reverse" }}
           bgColor="rgba(255, 255, 255, 0.03)"
           alignItems={"center"}
           w="80%"
           justifyContent={"space-evenly"}
           borderRadius="2rem"
-          flexDir={"row-reverse"}
         >
           <Image src={number2} alt="number 2" />
-          <Box display={"flex"} flexDir="column" gap="2rem" w="65%" pl="2rem">
+          <Box
+            display={"flex"}
+            flexDir="column"
+            gap="2rem"
+            w={{ base: "85%", md: "65%" }}
+            pl={{ base: "0", md: "2rem" }}
+            py="1rem"
+          >
             <Text color="white" fontSize={"xl"}>
               If you match just two time units (Hours & Minutes/Hours &
               Seconds/Minutes & Seconds) for either your Credit alert or Debit
@@ -312,6 +342,7 @@ const HowItWorks = () => {
         <Box
           mt="6.6rem"
           display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
           bgColor="rgba(255, 255, 255, 0.03)"
           alignItems={"center"}
           w="80%"
@@ -319,7 +350,14 @@ const HowItWorks = () => {
           borderRadius="2rem"
         >
           <Image src={number3} alt="number 3" />
-          <Box display={"flex"} flexDir="column" gap="2rem" w="65%" pr="2rem">
+          <Box
+            display={"flex"}
+            flexDir="column"
+            gap="2rem"
+            w={{ base: "85%", md: "65%" }}
+            pr={{ base: "0", md: "2rem" }}
+            py="1rem"
+          >
             <Text color="white" fontSize={"xl"}>
               If you match just one single time unit (Hour/Minute/Second), you
               immediately get one (1) point to enter the monthly Mega Million
@@ -344,23 +382,24 @@ const HowItWorks = () => {
         display="flex"
         flexDir="column"
         alignItems="center"
-        pt="6.68rem"
+        pt={{ base: "4rem", md: "6.68rem" }}
         pb="10rem"
       >
         <Text
-          lineHeight={"3.75rem"}
-          fontSize="2.5rem"
+          lineHeight={{ base: "2.5rem", md: "3.75rem" }}
+          fontSize={{ base: "2rem", md: "2.5rem" }}
           color="nairablue"
           fontWeight={700}
-          textAlign="center"
+          w={{ base: "80%", lg: "max-content" }}
+          textAlign={{ base: "left", md: "center" }}
         >
           How To Qualify For Naira Boom <br /> Mega MIllion Cashpot
         </Text>
         <Text
           fontSize={"lg"}
           color="#767676"
-          w="50%"
-          textAlign={"center"}
+          w={{ base: "80%", lg: "50%" }}
+          textAlign={{ base: "left", md: "center" }}
           pt="2rem"
           lineHeight={"1.8rem"}
         >
@@ -370,74 +409,87 @@ const HowItWorks = () => {
           easier.{" "}
         </Text>
         <Box
-          pt="8.8rem"
-          w="80%"
+          pt="7rem"
+          w="85%"
           display={"flex"}
-          alignItems="flex-start"
-          gap="2rem"
+          alignItems="center"
+          flexDir={"column"}
+          gap="2.5rem"
         >
           <Box
             display={"flex"}
-            flexDir="column"
-            alignItems="flex-end"
-            gap="5.5rem"
-            w="50%"
+            alignItems="flex-start"
+            justifyContent={"center"}
+            w="100%"
+            gap={{ base: "1rem", md: "3rem" }}
           >
-            <Text textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
+            <Text w="45%" textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
               Match all 3 time units (Hr:Min:Sec)
             </Text>
-            <Text textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
-              Match 2 time units (Hr: Min)
+            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
+              <Image src={arrow} alt="arrow icon" />
+            </Square>
+            <Text w="45%" textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
+              Automatic entry into the Mega Million CashPot{" "}
             </Text>
-            <Text textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
-              Match single time unit (Hr)
-            </Text>
-            <Text textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
-              Make 20 requests for Cashback within a month (even if you
-              don&quot;t match any winning time unit)
-            </Text>
-          </Box>
-
-          <Box display={"flex"} flexDir="column" alignItems="center" gap="5rem">
-            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
-              <Image src={arrow} alt="arrow icon" />
-            </Square>
-
-            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
-              <Image src={arrow} alt="arrow icon" />
-            </Square>
-            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
-              <Image src={arrow} alt="arrow icon" />
-            </Square>
-            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
-              <Image src={arrow} alt="arrow icon" />
-            </Square>
           </Box>
           <Box
             display={"flex"}
-            flexDir="column"
             alignItems="flex-start"
-            gap="5rem"
-            w="50%"
+            justifyContent={"center"}
+            w="100%"
+            gap={{ base: "1rem", md: "3rem" }}
           >
-            <Text textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
+            <Text w="45%" textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
+              Match 2 time units (Hr: Min)
+            </Text>
+            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
+              <Image src={arrow} alt="arrow icon" />
+            </Square>
+            <Text w="45%" textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
               Automatic entry into the Mega Million CashPot{" "}
             </Text>
-            <Text textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
-              Automatic entry into the Mega Million CashPot
+          </Box>
+          <Box
+            display={"flex"}
+            alignItems="flex-start"
+            justifyContent={"center"}
+            w="100%"
+            gap={{ base: "1rem", md: "3rem" }}
+          >
+            <Text w="45%" textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
+              Match single time unit (Hr)
             </Text>
-            <Text textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
+            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
+              <Image src={arrow} alt="arrow icon" />
+            </Square>
+            <Text w="45%" textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
               1 Mega Million CashPot entry. You need to match 10 single time
               units within a month to qualify for entry into the Mega Million
               CashPot.
             </Text>
-            <Text textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
+          </Box>
+          <Box
+            display={"flex"}
+            alignItems="flex-start"
+            justifyContent={"center"}
+            w="100%"
+            gap={{ base: "1rem", md: "3rem" }}
+          >
+            <Text w="45%" textAlign={"right"} fontSize="xl" lineHeight={"1.8rem"}>
+              Make 20 requests for Cashback within a month (even if you
+              don&quot;t match any winning time unit)
+            </Text>
+            <Square h="39px" w="60px" borderRadius={"md"} bgColor="nairagreen">
+              <Image src={arrow} alt="arrow icon" />
+            </Square>
+            <Text w="45%" textAlign={"left"} fontSize="xl" lineHeight={"1.8rem"}>
               Mega Million CashPot entry
             </Text>
           </Box>
         </Box>
       </Box>
-      <Getstarted/>
+      <Getstarted />
       <FooterComponent />
     </Box>
   );

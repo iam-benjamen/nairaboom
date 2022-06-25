@@ -21,7 +21,6 @@ import reason4 from "../public/homepage/reason4.svg";
 import rightellipse from "../public/navassets/rightellipse.png";
 import leftellipse from "../public/navassets/leftellipse.png";
 
-
 export default function Home() {
   const options = [
     ["Play with profile", "/register"],
@@ -41,14 +40,20 @@ export default function Home() {
         justifyContent={"center"}
         height="max-content"
         alignItems="center"
-        pt={"5rem"}
+        pt={{ base: "4rem", md: "5rem" }}
+        pb={{ base: "4rem", lg: "0" }}
       >
-        <Box display={"flex"} flexDir="column" w="30%" fontFamily={"poppins"}>
+        <Box
+          display={"flex"}
+          flexDir="column"
+          w={{ base: "90%", md: "50%", lg: "33%" }}
+          fontFamily={"poppins"}
+        >
           <Heading
             color={"nairablue"}
             fontWeight={"800"}
-            fontSize="3rem"
-            lineHeight={"4rem"}
+            fontSize={{ base: "2.5rem", lg: "3rem" }}
+            lineHeight={{ base: "3.5rem", lg: "4rem" }}
             fontFamily="poppins"
           >
             Get up to 500% cashback on withdrawals
@@ -88,9 +93,10 @@ export default function Home() {
                   bgColor="white"
                   color="black"
                   borderRadius="md"
-                  w="30%"
+                  w={{ base: "max-content", md: "30%" }}
+                  px={{ base: ".5rem" }}
                   boxShadow="md"
-                  h="2rem"
+                  h={{base:"fit-content", sm:"2rem"}}
                   textAlign={"center"}
                   fontSize="12px"
                   pt=".5rem"
@@ -103,30 +109,41 @@ export default function Home() {
             ))}
           </Box>
         </Box>
-        <Image src={picture1} alt="picture 1" />
+        <Box
+          w={{ md: "40%", lg: "50%" }}
+          display={{ base: "none", lg: "block" }}
+        >
+          <Image src={picture1} alt="picture 1" />
+        </Box>
       </Box>
 
       <Box
         bgColor={"white"}
         fontFamily="poppins"
         display={"flex"}
+        flexDir={{ base: "column", lg: "row" }}
+        gap={{ base: "2rem", lg: "0" }}
         alignItems="center"
         justifyContent={"space-evenly"}
-        py="5rem"
+        py={{ base: "3rem", lg: "5rem" }}
       >
-        <Image src={picture2} alt="homepage second picture" />
-
+        <Box display={{ base: "none", lg: "block" }}>
+          <Image src={picture2} alt="homepage second picture" />
+        </Box>
         <Box
           display={"flex"}
           gap="1.5rem"
           flexDir="column"
-          w="50%"
+          w={{ base: "90%", lg: "50%" }}
           float={"right"}
         >
           <Text fontWeight={500} color="nairagreen">
             About Us
           </Text>
-          <Heading fontFamily={"poppins"} fontSize="2.5rem">
+          <Heading
+            fontFamily={"poppins"}
+            fontSize={{ base: "2rem", lg: "2.5rem" }}
+          >
             Africa’s pioneer Electronic Transaction Request Back Service
           </Heading>
           <Text color={"#767676"} fontSize="xl">
@@ -160,14 +177,14 @@ export default function Home() {
       </Box>
       <Box
         fontFamily={"poppins"}
-        py="11rem"
+        py={{ base: "2rem", md: "8rem", lg: "11rem" }}
         display={"flex"}
         flexDir="column"
         alignItems={"center"}
-        px="6rem"
+        px={{ base: "2rem", lg: "6rem" }}
         bgColor={"white"}
       >
-        <Heading fontFamily={"poppins"} pb="5rem">
+        <Heading fontFamily={"poppins"} pb={{ base: "3rem", md: "5rem" }}>
           Easy Steps To Win Cashback Daily
         </Heading>
         <Box
@@ -234,14 +251,22 @@ export default function Home() {
       <Box
         bgColor={"nairablue"}
         display="flex"
+        flexDir={{ base: "column", md: "row" }}
         fontFamily={"poppins"}
-        py="6.5rem"
+        py={{ base: "4rem", md: "6.5rem" }}
         justifyContent={"center"}
-        gap="5rem"
+        gap={{ base: "1rem", md: "5rem" }}
         alignItems={"center"}
-        backgroundImage={`url(${rightellipse.src}), url(${leftellipse.src})`}
-        backgroundPosition="right center, left center"
+        backgroundImage={{
+          base: `url(${rightellipse.src}), url(${leftellipse.src})`,
+          md: `url(${rightellipse.src}), url(${leftellipse.src})`,
+        }}
+        backgroundPosition={{
+          base: "right top, left bottom",
+          md: "right center, left center",
+        }}
         backgroundRepeat="no-repeat"
+        mt="1rem"
       >
         <Box display={"flex"} alignItems="center">
           <Box as={Link}>
@@ -277,17 +302,32 @@ export default function Home() {
       >
         <Heading
           fontWeight={700}
-          fontSize="40px"
+          fontSize={{ base: "2rem", lg: "2.5rem" }}
           fontFamily={"poppins"}
           color="nairablue"
-          pb={"8rem"}
+          pb={{ base: "5rem", md: "8rem" }}
+          textAlign="center"
         >
           Why Request Cashback?
         </Heading>
         <Box display={"flex"} flexDir="column" gap={"8rem"}>
-          <Box display={"flex"} justifyContent="space-evenly">
-            <Image src={reason1} alt="cashback reason" />
-            <Box display="flex" flexDir="column" gap="2.2rem" w="50%">
+          <Box
+            display={"flex"}
+            flexDir={{ base: "column", md: "row" }}
+            justifyContent="space-evenly"
+            alignItems={"center"}
+            gap="1rem"
+          >
+            <Box w={{ base: "85%", md: "max-content" }}>
+              <Image src={reason1} alt="cashback reason" />
+            </Box>
+
+            <Box
+              display="flex"
+              flexDir="column"
+              gap="2.2rem"
+              w={{ base: "90%", md: "50%" }}
+            >
               <Text color="nairablue" fontWeight={700} fontSize="25px">
                 Up to 500% Cashback on ATM withdrawals
               </Text>
@@ -301,15 +341,19 @@ export default function Home() {
           <Box
             display={"flex"}
             justifyContent="space-evenly"
-            flexDir={"row-reverse"}
+            flexDir={{ base: "column", md: "row-reverse" }}
+            alignItems="center"
+            gap="1rem"
           >
-            <Image src={reason2} alt="cashback reason" />
+            <Box w={{ base: "85%", md: "max-content" }}>
+              <Image src={reason2} alt="cashback reason" />
+            </Box>
             <Box
               display="flex"
               flexDir="column"
               gap="2.2rem"
-              w="50%"
-              textAlign={"right"}
+              w={{ base: "90%", md: "50%" }}
+              textAlign={{ base: "left", md: "right" }}
             >
               <Text color="nairablue" fontWeight={700} fontSize="25px">
                 Up to 100% Cashback on transfers and POS payments
@@ -321,9 +365,22 @@ export default function Home() {
               </Text>
             </Box>
           </Box>
-          <Box display={"flex"} justifyContent="space-evenly">
-            <Image src={reason3} alt="cashback reason" />
-            <Box display="flex" flexDir="column" gap="2.2rem" w="50%">
+          <Box
+            display={"flex"}
+            justifyContent="space-evenly"
+            flexDir={{ base: "column", md: "row" }}
+            alignItems="center"
+            gap="1rem"
+          >
+            <Box w={{ base: "85%", md: "max-content" }}>
+              <Image src={reason3} alt="cashback reason" />
+            </Box>
+            <Box
+              display="flex"
+              flexDir="column"
+              gap="2.2rem"
+              w={{ base: "90%", md: "50%" }}
+            >
               <Text color="nairablue" fontWeight={700} fontSize="25px">
                 Random Daily Giveaway
               </Text>
@@ -337,15 +394,19 @@ export default function Home() {
           <Box
             display={"flex"}
             justifyContent="space-evenly"
-            flexDir={"row-reverse"}
+            flexDir={{ base: "column", md: "row-reverse" }}
+            alignItems="center"
+            gap="1rem"
           >
-            <Image src={reason4} alt="cashback reason" />
+            <Box w={{ base: "85%", md: "max-content" }}>
+              <Image src={reason4} alt="cashback reason" />
+            </Box>
             <Box
               display="flex"
               flexDir="column"
               gap="2.2rem"
-              w="50%"
-              textAlign={"right"}
+              w={{ base: "90%", md: "50%" }}
+              textAlign={{ base: "left", md: "right" }}
             >
               <Text color="nairablue" fontWeight={700} fontSize="25px">
                 Monthly Mega Millions Cashout

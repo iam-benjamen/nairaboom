@@ -5,12 +5,12 @@ const CashBack = (props) => {
   return (
     <Box
       w={"30%"}
-      minW="22rem"
+      minW={{ base: "95%", md: "22rem" }}
       bgColor="#F6F6F6"
       borderRadius={"24px"}
       pb="4rem"
       boxShadow={"md"}
-      _hover={{boxShadow:"lg"}}
+      _hover={{ boxShadow: "lg" }}
     >
       <Circle size="40px" top={0} left={0} bgColor="white">
         <Circle size="20px" bgColor={"#f6f6f6"}>
@@ -24,8 +24,8 @@ const CashBack = (props) => {
         flexDir="column"
         alignItems={"flex-start"}
         gap="2rem"
-        pl="3rem"
-        pr="4rem"
+        pl={{ base: "2rem", md: "3rem" }}
+        pr={{ base: "2rem", md: "4rem" }}
         pt="1rem"
       >
         <Image src={props.icon} alt="icon 1" />

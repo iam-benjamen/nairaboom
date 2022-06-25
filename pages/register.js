@@ -26,17 +26,21 @@ const RegisterPage = () => {
     <Box
       h="max-content"
       bgColor={"#F7F7F7"}
-      backgroundImage={`url(${bg.src})`}
+      backgroundImage={{ lg: `url(${bg.src})` }}
       backgroundPosition="right"
       backgroundRepeat="no-repeat"
-      pl="8rem"
+      pl={{ base: "2rem", md: "8rem" }}
       pt="4.8rem"
     >
       <Box as={Link} href="/">
         <Image src={nairaboomlogo} alt="nairaboom logo" />
       </Box>
 
-      <Box w="27.5rem" fontFamily={"poppins"} mt="7rem">
+      <Box
+        w={{ base: "90%", md: "27.5rem" }}
+        fontFamily={"poppins"}
+        mt={{ base: "3rem", lg: "7rem" }}
+      >
         <Tabs
           variant="unstyled"
           isFitted
@@ -53,7 +57,7 @@ const RegisterPage = () => {
               borderTop="5px solid white"
               borderRadius={"3px"}
               color="#A7A7A7"
-              fontSize={"1.6rem"}
+              fontSize={{ base: "1.3rem", md: "1.6rem" }}
             >
               Log In
             </Tab>
@@ -66,7 +70,7 @@ const RegisterPage = () => {
               borderTop="5px solid white"
               borderRadius={"3px"}
               color="#A7A7A7"
-              fontSize={"1.6rem"}
+              fontSize={{ base: "1.3rem", md: "1.6rem" }}
             >
               Register
             </Tab>
@@ -84,7 +88,7 @@ const RegisterPage = () => {
                   type={"email"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="2rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   placeholder="Password"
@@ -95,7 +99,7 @@ const RegisterPage = () => {
                   type={"password"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="3rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Checkbox colorScheme={"green"}>Remember me</Checkbox>
                 <chakra.span
@@ -108,14 +112,14 @@ const RegisterPage = () => {
                 </chakra.span>
                 <Input
                   value={"Log In"}
-                  w="27.5rem"
+                  w="100%"
                   border={"none"}
                   color="white"
                   bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
                   type={"submit"}
                   fontWeight={600}
                   fontSize="lg"
-                  mb="15.5rem"
+                  mb={{base:"5rem", md:"10rem", lg:"15.5rem"}}
                   cursor={"pointer"}
                 />
               </form>
@@ -132,7 +136,7 @@ const RegisterPage = () => {
                   type={"text"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="2rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   placeholder="Email"
@@ -143,7 +147,7 @@ const RegisterPage = () => {
                   type={"email"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="2rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   placeholder="Phone Number"
@@ -154,7 +158,7 @@ const RegisterPage = () => {
                   type={"tel"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="2rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   placeholder="Password"
@@ -165,7 +169,7 @@ const RegisterPage = () => {
                   type={"password"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="3rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   placeholder="Confirm Password"
@@ -176,11 +180,11 @@ const RegisterPage = () => {
                   type={"password"}
                   _placeholder={{ fontSize: "17.62px" }}
                   mb="3rem"
-                  focusBorderColor ="nairagreen"
+                  focusBorderColor="nairagreen"
                 />
                 <Input
                   value={"Register"}
-                  w="27.5rem"
+                  w="100%"
                   border={"none"}
                   color="white"
                   bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"

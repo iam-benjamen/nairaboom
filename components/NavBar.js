@@ -13,7 +13,7 @@ const NavBar = () => {
   function openNav() {
     let sideNav = document.getElementById("mySidenav");
     sideNav.style.width = "100%";
-    sideNav.style.height = "60%";
+    sideNav.style.height = "100%";
     setMonitorIcon(false);
   }
 

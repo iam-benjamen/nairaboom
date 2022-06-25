@@ -4,7 +4,7 @@ const BackgroundTitle = (props) => {
     return (
         <Box
         backgroundImage={`url(${background.src})`}
-        backgroundPosition="center"
+        backgroundPosition={{base:"right", md:"center"}}
         backgroundRepeat="no-repeat"
         backgroundSize={"cover"}
         backgroundAttachment="fixed"
@@ -15,7 +15,7 @@ const BackgroundTitle = (props) => {
       >
         <Heading
           color={"nairablue"}
-          fontSize={{base:"3rem", md:"4rem"}}
+          fontSize={{base:"2.7rem", md:"4rem"}}
           fontWeight={700}
           fontFamily={"poppins"}
           maxW="37rem"

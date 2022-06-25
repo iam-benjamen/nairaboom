@@ -30,13 +30,14 @@ const ContactPage = () => {
         backgroundPosition="left top, left bottom"
         backgroundRepeat="no-repeat"
         display={"flex"}
+        flexDir={{ base: "column", lg: "row" }}
         justifyContent="center"
         alignItems={"center"}
         pb="10rem"
         gap="5rem"
       >
         <Box
-          w="30%"
+          w={{ base: "70%", lg: "30%" }}
           display={"flex"}
           gap="1.85rem"
           flexDir="column"
@@ -62,8 +63,8 @@ const ContactPage = () => {
           </HStack>
         </Box>
         <Box
-          pt="10rem"
-          w="35%"
+          pt={{ base: "2rem", lg: "10rem" }}
+          w={{ base: "70%", lg: "35%" }}
           fontFamily={"poppins"}
           display="flex"
           flexDir={"column"}
@@ -79,40 +80,40 @@ const ContactPage = () => {
           <form action="">
             <Input
               placeholder="Username"
-              w="27.5rem"
+              w={{ base: "100%", lg: "27.5rem" }}
               h="3.6rem"
               border={"none"}
               bgColor="#F6F6F6"
               type={"text"}
               _placeholder={{ fontSize: "17.62px" }}
               mb="1.85rem"
-              focusBorderColor ="nairagreen"
+              focusBorderColor="nairagreen"
             />
             <Input
               placeholder="Password"
-              w="27.5rem"
+              w={{ base: "100%", lg: "27.5rem" }}
               h="3.6rem"
               border={"none"}
               bgColor="#F6F6F6"
               type={"password"}
               _placeholder={{ fontSize: "17.62px" }}
               mb="1.85rem"
-              focusBorderColor ="nairagreen"
+              focusBorderColor="nairagreen"
             />
             <Input
               placeholder="Phone number"
-              w="27.5rem"
+              w={{ base: "100%", lg: "27.5rem" }}
               h="3.6rem"
               border={"none"}
               bgColor="#F6F6F6"
               type={"tel"}
               _placeholder={{ fontSize: "17.62px" }}
               mb="1.85rem"
-              focusBorderColor ="nairagreen"
+              focusBorderColor="nairagreen"
             />
             <Input
               placeholder="Enter your message"
-              w="27.5rem"
+              w={{ base: "100%", lg: "27.5rem" }}
               pt="1.3rem"
               pb="9.7rem"
               border={"none"}
@@ -120,11 +121,11 @@ const ContactPage = () => {
               type={"text"}
               _placeholder={{ fontSize: "17.62px" }}
               mb="1.85rem"
-              focusBorderColor ="nairagreen"
+              focusBorderColor="nairagreen"
             />
             <Input
               value={"Send Message"}
-              w="27.5rem"
+              w={{ base: "100%", lg: "27.5rem" }}
               border={"none"}
               color="white"
               bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
@@ -139,7 +140,7 @@ const ContactPage = () => {
           </form>
         </Box>
       </Box>
-      <Getstarted/>
+      <Getstarted />
       <FooterComponent />
     </Box>
   );

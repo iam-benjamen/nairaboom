@@ -32,7 +32,7 @@ const CashBackATM = () => {
       <Box
         bgColor={"white"}
         pt="4.5rem"
-        pb="14.8rem"
+        pb={{base:"5rem", md:"10rem",lg:"14.8rem"}}
         backgroundImage={`url(${coil.src}), url(${coil2.src})`}
         backgroundPosition="center left, top right"
         backgroundRepeat="no-repeat"
@@ -41,15 +41,21 @@ const CashBackATM = () => {
         alignItems={"center"}
         fontFamily="poppins"
       >
-        <Text fontWeight={700} fontSize="2.5rem">
+        <Text
+          textAlign={{ base: "center", md: "left" }}
+          w={{ base: "85%", md: "max-content" }}
+          fontWeight={700}
+          fontSize={{ base: "2rem", md: "2.5rem" }}
+        >
           Welcome to Naira Boom ATM Play
         </Text>
         <Text
-          fontSize={"xl"}
+          fontSize={{ base: "1rem", md: "xl" }}
           fontWeight={500}
           pt="1.8rem"
           pb="4.5rem"
           textAlign={"center"}
+          w={{ base: "85%", md: "max-content" }}
         >
           NAIRA BOOM ATM PLAY IS AVAILABLE on every ATM terminal <br /> all over
           Nigeria.
@@ -69,27 +75,24 @@ const CashBackATM = () => {
             fontSize={"xl"}
             fontWeight={500}
             textAlign="center"
-            w="25rem"
+            w={{ base: "85%", md: "25rem" }}
           >
             To request for cashback through the ATM follow the instructions
             below:
           </Text>
-          <Box
-            display={"flex"}
-            justifyContent="space-evenly"
-            flexWrap={"wrap"}
-          >
+          <Box display={"flex"} justifyContent="space-evenly" flexWrap={"wrap"}>
             {instructArray.map((item, index) => (
               <Box
                 justifyContent={"flex-start"}
                 alignItems="center"
                 display={"flex"}
+                flexDir={{ base: "column", md: "row" }}
                 bgColor={"nairablue"}
                 borderRadius={"xl"}
                 gap="1.03rem"
-                w="35%"
+                w={{base:"75%",md:"35%"}}
                 py="2rem"
-                pl="1.5rem"
+                px={{ base: ".5rem", md: "1.5rem" }}
                 key={index}
                 mb="1.5rem"
               >
@@ -102,13 +105,15 @@ const CashBackATM = () => {
                 >
                   {item[0]}
                 </Circle>
-                <Text color="white">{item[1]}</Text>
+                <Text textAlign={{ base: "center", md: "left" }} color="white">
+                  {item[1]}
+                </Text>
               </Box>
             ))}
           </Box>
         </Box>
       </Box>
-     <Getstarted/>
+      <Getstarted />
       <FooterComponent />
     </Box>
   );

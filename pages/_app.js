@@ -6,6 +6,7 @@ const colors = {
   nairagreen: "#1ED760",
   nairablue: "#002047",
 };
+
 const breakpoints = {
   sm: '320px',
   md: '768px',

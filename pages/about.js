@@ -37,6 +37,8 @@ const AboutPage = () => {
         bgColor={"white"}
         fontFamily="poppins"
         display={"flex"}
+        flexDir={{ base: "column", lg: "row" }}
+        gap={{ base: "2rem", lg: "0" }}
         alignItems="center"
         justifyContent={"space-evenly"}
         py="5rem"
@@ -44,18 +46,25 @@ const AboutPage = () => {
         backgroundPosition="right top"
         backgroundRepeat="no-repeat"
       >
-        <Image src={picture2} alt="homepage second picture" />
+        <Box display={{base:"none", lg:"block"}}>
+          <Image src={picture2} alt="homepage second picture" />
+        </Box>
+
         <Box
           display={"flex"}
           gap=".6rem"
           flexDir="column"
-          w="50%"
+          w={{ base: "90%", lg: "50%" }}
           float={"right"}
         >
           <Text fontWeight={500} color="nairagreen">
             About Us
           </Text>
-          <Heading color="nairablue" fontFamily={"poppins"} fontSize="2.5rem">
+          <Heading
+            color="nairablue"
+            fontFamily={"poppins"}
+            fontSize={{ base: "2rem", lg: "2.5rem" }}
+          >
             Africa’s pioneer Electronic Transaction Request Back Service
           </Heading>
           <Text color={"nairablue"} fontSize="xl" pt="1.4rem">
@@ -83,18 +92,22 @@ const AboutPage = () => {
         backgroundImage={`url(${coil.src})`}
         backgroundPosition="left top"
         backgroundRepeat="no-repeat"
-        pt="10rem"
-        pb="9rem"
+        pt={{base:"6rem", lg:"10rem"}}
+        pb={{base:"4rem", lg:"9rem"}}
         display={"flex"}
         flexDir="row-reverse"
         justifyContent="space-evenly"
+        alignItems={"center"}
       >
-        <Image src={reason4} alt="cashback reason" />
+        <Box display={{ base: "none", lg: "block" }}>
+          <Image src={reason4} alt="cashback reason" />
+        </Box>
+
         <Box
           display="flex"
           flexDir="column"
           gap="2.2rem"
-          w="40%"
+          w={{ base: "90%", lg: "40%" }}
           fontFamily={"poppins"}
         >
           <Text fontWeight={700} fontSize="2.3rem" color="nairablue">
@@ -114,26 +127,40 @@ const AboutPage = () => {
         alignItems={"center"}
         justifyContent={"space-evenly"}
         display={"flex"}
+        flexDir={{ base: "column", md: "row" }}
         bgColor="#F6F6F6"
-        py={"12.5rem"}
+        py={{ base: "6rem", lg: "12.5rem" }}
         mb="10.35rem"
+        gap={{ base: "3rem", md: "0" }}
       >
-        <Box fontFamily={"poppins"} w="35%" position={"relative"}>
+        <Box
+          fontFamily={"poppins"}
+          w={{ base: "85%", md: "35%" }}
+          position={"relative"}
+        >
           <Text fontWeight={700} fontSize="2.3rem" color="nairablue">
             Your Naira Boom Dividends Membership benefits include:{" "}
           </Text>
-          <chakra.span position={"absolute"} right={-100} bottom={21}>
+          <chakra.span
+            display={{ base: "none", lg: "block" }}
+            position={"absolute"}
+            right={-100}
+            bottom={21}
+          >
             <Image src={longpointer} alt="Long pointer" />
           </chakra.span>
         </Box>
-        <Box>
+        <Box w={{ base: "85%", md: "max-content" }}>
           <List spacing={5} fontFamily="poppins">
             {listcontent.map((listitem, index) => (
-              <ListItem key={index} fontWeight={400} fontSize="xl" color="nairablue">
+              <ListItem
+                key={index}
+                fontWeight={400}
+                fontSize="xl"
+                color="nairablue"
+              >
                 <ListIcon as={CustomListIcon} />
-                <chakra.span pl="1.5rem">
-                  {listitem}
-                </chakra.span>
+                <chakra.span pl="1.5rem">{listitem}</chakra.span>
               </ListItem>
             ))}
           </List>
