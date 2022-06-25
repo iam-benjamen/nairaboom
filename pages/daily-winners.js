@@ -23,18 +23,18 @@ const DailyWinners = () => {
       <NavBar />
       <Box
         backgroundImage={`url(${background.src})`}
-        backgroundPosition="center"
+        backgroundPosition={{ base: "right", md: "center" }}
         backgroundRepeat="no-repeat"
         backgroundSize={"cover"}
         backgroundAttachment="fixed"
         display={"flex"}
         alignItems="center"
         justifyContent={"center"}
-        py="10rem"
+        py={{ base: "6rem", md: "8rem", lg: "10rem" }}
       >
         <Heading
           color={"nairablue"}
-          fontSize={"4rem"}
+          fontSize={{ base: "2rem", md: "4rem" }}
           fontWeight={700}
           fontFamily={"poppins"}
           textAlign={"center"}
@@ -48,7 +48,9 @@ const DailyWinners = () => {
             ner
           </chakra.span>
         </Heading>
-        <Image src={party} alt="party" />
+        <Box maxW={"30%"}>
+          <Image src={party} alt="party" />
+        </Box>
       </Box>
       <Box
         bgColor={"white"}
@@ -61,14 +63,14 @@ const DailyWinners = () => {
         flexDir={"column"}
         alignItems="center"
       >
-        <Text pb="1.6rem" fontSize={"1.5rem"} fontWeight={700}>
+        <Text pb="1.6rem" fontSize={{base:"1.2rem",md:"1.5rem"}} fontWeight={700}>
           Check My Number
         </Text>
         <form action="">
           <Box
             display={"flex"}
-            w="33.75rem"
-            h="6rem"
+            w={{ base: "90%", md: "33.75rem" }}
+            h={{ base: "4rem", md: "6rem" }}
             borderRadius={"15px"}
             bgColor={"#F6F6F6"}
           >
@@ -85,7 +87,7 @@ const DailyWinners = () => {
               type="submit"
               bgColor={"nairagreen"}
               w="7rem"
-              h="6rem"
+              h={{ base: "4rem", md: "6rem" }}
             >
               <Image src={searchIcon} alt="search icon" />
             </Button>
@@ -95,19 +97,23 @@ const DailyWinners = () => {
           backgroundImage={`url(${confetti.src})`}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
-          mt="6.3rem"
+          mt={{ base: "4rem", md: "6.3rem" }}
           bgColor={"#F6F6F6"}
-          borderRadius={"2.1rem"}
-          pt="4.5rem"
-          pb="3.5rem"
+          borderRadius={{base:"1.6rem",md:"2.1rem"}}
+          pt={{ base: "3rem", md: "4.5rem" }}
+          pb={{ base: "2rem", md: "3.5rem" }}
           display={"flex"}
           flexDir="column"
           fontFamily={"poppins"}
           color="nairablue"
-          w="90%"
+          w={{ base: "99%", md: "90%" }}
           alignItems={"center"}
         >
-          <Text fontWeight={700} fontSize="1.5rem" pb="3rem">
+          <Text
+            fontWeight={700}
+            fontSize={{ base: "1.2rem", md: "1.5rem" }}
+            pb="3rem"
+          >
             List Of Daily Winners
           </Text>
           <Box w="90%">
@@ -120,57 +126,105 @@ const DailyWinners = () => {
               justifyContent={"space-evenly"}
               mb="1.8rem"
             >
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 S/N
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Full Name
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Phone Number
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Amount won
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Date won
               </Text>
             </Box>
-            <Box display={"flex"} flexDir="column" gap="1.4rem" mb="7.6rem">
+            <Box
+              display={"flex"}
+              flexDir="column"
+              gap="1.4rem"
+              mb={{ base: "4rem", md: "7.6rem" }}
+            >
               {numbers.map((number, index) => (
                 <Box
                   display={"flex"}
-                  justifyContent={"space-evenly"}
+                  justifyContent={{ base: "space-between", md: "space-evenly" }}
                   fontFamily="poppins"
                   key={index}
                 >
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "0.8rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     {number}
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "0.8rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     Nwabueze E.
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "0.8rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     *********08
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "0.8rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     ₦ 3,000 Won
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "0.8rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     2021-10-07
                   </Text>
                 </Box>
               ))}
             </Box>{" "}
             <Box
-              mb="5.375rem"
+              mb={{ base: "3rem", md: "5.375rem" }}
               display={"flex"}
               justifyContent="space-evenly"
+              maxW={"90%"}
+              flexDir={{ base: "column", md: "row" }}
+              gap={{ base: "1rem", md: "0" }}
             >
               <Text fontSize={"14px"} color="#A7A7A7">
                 Showing 1 - 10 of 1,200
               </Text>
-              <Box display={"flex"} gap="11px">
+              <Box
+                flexWrap={"wrap"}
+                display={"flex"}
+                gap="11px"
+                maxW={"inherit"}
+              >
                 <Square
                   color="white"
                   size={"2.1rem"}

@@ -11,7 +11,7 @@ const BackgroundTitle = (props) => {
         display={"flex"}
         alignItems="center"
         justifyContent={"center"}
-        py="10rem"
+        py={{base:"6rem",md:"8rem",lg:"10rem"}}
       >
         <Heading
           color={"nairablue"}

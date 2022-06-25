@@ -27,37 +27,61 @@ const Cashout = () => {
         flexDir="column"
         alignItems={"center"}
         fontFamily="poppins"
-        gap="8.8rem"
+        gap={{ base: "4rem", md: "5rem", lg: "8.8rem" }}
       >
         <Box
           color="nairablue"
           alignItems="center"
           display={"flex"}
           flexDir="column"
+          w="100%"
         >
-          <Text pb="1.85rem" fontWeight={700} fontSize="2.5rem">
+          <Text
+            pb={{ base: "1.5rem", md: "1.85rem" }}
+            fontWeight={700}
+            fontSize={{ base: "2rem", md: "2.5rem" }}
+          >
             Wish Clock
           </Text>
-          <Text textAlign={"center"} pb="3rem">
+          <Text textAlign={"center"} pb={{ base: "1.5rem", md: "3rem" }}>
             Our wish clock picks daily winners, <br /> be that winner today!
           </Text>
           <Clock />
         </Box>
+
         <Box
           color="nairablue"
           alignItems="center"
           display={"flex"}
           flexDir="column"
+          w="100%"
         >
-          <Text pb="1.85rem" fontWeight={700} fontSize="2.5rem">
+          <Text
+            w={{ base: "80%", md: "max-content" }}
+            pb={{ base: "1.2rem", md: "1.85rem" }}
+            fontWeight={700}
+            fontSize={{ base: "2rem", md: "2.5rem" }}
+            textAlign={{ base: "center", md: "left" }}
+          >
             Latest Lucky Cashback Time
           </Text>
-          <Text textAlign={"center"} pb="3rem">
+          <Text
+            w={{ base: "80%", md: "max-content" }}
+            textAlign={"center"}
+            pb={{ base: "1.5rem", md: "3rem" }}
+          >
             This is the latest cashback time, <br /> check perhaps you could be
             the winner
           </Text>
           <Clock />
-          <Box pt="7.6rem" display={"flex"} gap="4.5rem">
+          <Box
+            justifyContent={"center"}
+            pt="7.6rem"
+            display={"flex"}
+            gap="4.5rem"
+            w="90%"
+            flexWrap={"wrap"}
+          >
             <NextLink href={"/daily-winners"} passHref>
               <Link
                 bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
@@ -66,7 +90,7 @@ const Cashout = () => {
                 fontSize="lg"
                 py=".8rem"
                 textAlign={"center"}
-                w="24rem"
+                w={{ base: "90%", md: "24rem" }}
                 borderRadius={"md"}
                 cursor={"pointer"}
                 transitionDuration={".3s"}
@@ -82,7 +106,7 @@ const Cashout = () => {
                 fontWeight={600}
                 fontSize="lg"
                 py=".8rem"
-                w="24rem"
+                w={{ base: "90%", md: "24rem" }}
                 borderRadius={"md"}
                 textAlign={"center"}
                 cursor={"pointer"}
@@ -96,15 +120,21 @@ const Cashout = () => {
         </Box>
         <Box
           bgColor={"#F6F6F6"}
-          borderRadius="2rem"
-          px="13.3rem"
+          borderRadius={{base:"1.5rem",md:"2rem"}}
+          px={{ sm: "1rem", md: "6rem", lg: "13.3rem" }}
           pt="4.3rem"
           display={"flex"}
           flexDir="column"
-          w="90%"
+          w={{base:"99%",md:"90%"}}
           alignItems={"center"}
         >
-          <Text pb="4.25rem" fontSize={"xl"} fontWeight={700}>
+          <Text
+            pb={{ base: "3rem", md: "4.25rem" }}
+            fontSize={"xl"}
+            fontWeight={700}
+            color="nairablue"
+            textAlign={{base:"center", md:"left"}}
+          >
             Lucky Cashback Time Archive
           </Text>
           <Box
@@ -113,10 +143,12 @@ const Cashout = () => {
             display={"flex"}
             justifyContent="space-between"
             gap="1rem"
+            flexDir={{ base: "column", md: "row" }}
+            alignItems="center"
           >
             <Box
               h="4.357rem"
-              w="31rem"
+              w={{ base: "90%", md: "31rem" }}
               pl={"1.5rem"}
               bgColor="white"
               display={"flex"}
@@ -135,7 +167,7 @@ const Cashout = () => {
             </Box>
             <Box
               h="4.357rem"
-              w="15.6rem"
+              w={{ base: "90%", md: "15.6rem" }}
               pl={"1.5rem"}
               bgColor="white"
               display={"flex"}
@@ -164,43 +196,76 @@ const Cashout = () => {
               justifyContent={"space-evenly"}
               mb="1.8rem"
             >
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 S/N
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Timestamp
               </Text>
-              <Text color="white" fontWeight={700} fontSize="xl">
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={{ base: ".7rem", md: "xl" }}
+              >
                 Timestamp Date
               </Text>
             </Box>
-            <Box display={"flex"} flexDir="column" gap="1.4rem" mb="7.6rem">
+            <Box
+              display={"flex"}
+              flexDir="column"
+              gap="1.4rem"
+              mb={{ base: "4rem", md: "7.6rem" }}
+            >
               {numbers.map((number, index) => (
                 <Box
                   w="100%"
                   display={"flex"}
                   fontFamily="poppins"
-                  justifyContent={"space-between"}
-                  px="8rem"
+                  justifyContent={"space-evenly"}
                   key={index}
                 >
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "1rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     {number}
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "1rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     14:20:34
                   </Text>
-                  <Text fontSize={"1.125rem"} color="nairablue">
+                  <Text
+                    fontSize={{ base: "1rem", md: "1.125rem" }}
+                    color="nairablue"
+                  >
                     24, Apr 2021
                   </Text>
                 </Box>
               ))}
             </Box>
-            <Box mb="5.375rem" display={"flex"} justifyContent="space-between">
+            <Box
+              mb={{ base: "3rem", md: "5.375rem" }}
+              display={"flex"}
+              justifyContent="space-between"
+              maxW={"90%"}
+              alignItems="center"
+              flexDir={{ base: "column", md: "row" }}
+              gap={{ base: "1rem", md: "0" }}
+            >
               <Text fontSize={"14px"} color="#A7A7A7">
                 Showing 1 - 10 of 1,200
               </Text>
-              <Box display={"flex"} gap="11px">
+              <Box display={"flex"} gap="11px" maxW={"inherit"}>
                 <Square
                   color="white"
                   size={"2.1rem"}

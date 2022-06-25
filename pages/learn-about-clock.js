@@ -23,22 +23,22 @@ const LearnClock = () => {
         flexDir="column"
         alignItems="center"
       >
-        <Text fontWeight={700} fontSize="2.5rem" pb="1.8rem">
+        <Text fontWeight={700} fontSize={{base:"2rem",md:"2.5rem"}} pb="1.8rem">
           Wish Clock
         </Text>
-        <Text pb="2.9rem" fontSize={"xl"} fontWeight={500}>
+        <Text textAlign={{base:"center", md:"left"}} pb="2.9rem" fontSize={"xl"} fontWeight={500}>
           Our wish clock picks daily winners, <br /> be that winner today!
         </Text>
         <Clock />
         <Box
           display={"flex"}
           flexDir="column"
-          px="7.25rem"
+          px={{base:"3rem",md:"7.25rem"}}
           py="3.4rem"
           mt="5rem"
           mb="7.4rem"
           bgColor="#F6F6F6"
-          w="80%"
+          w={{base:"90%",md:"80%"}}
           borderRadius={"1rem"}
         >
           <Text fontWeight={500} fontSize="xl" pb="2rem">
