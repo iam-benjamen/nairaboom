@@ -11,11 +11,11 @@ const BackgroundTitle = (props) => {
         display={"flex"}
         alignItems="center"
         justifyContent={"center"}
-        py={{base:"6rem",md:"8rem",lg:"10rem"}}
+        py={{base:"8rem",lg:"10rem"}}
       >
         <Heading
           color={"nairablue"}
-          fontSize={{base:"2.7rem", md:"4rem"}}
+          fontSize={{base:"2.5rem", md:"4rem"}}
           fontWeight={700}
           fontFamily={"poppins"}
           maxW="37rem"
