@@ -12,7 +12,7 @@ const Getstarted = () => {
       fontFamily={"poppins"}
       py={{ base: "4rem", md: "6.5rem" }}
       justifyContent={"center"}
-      gap="5rem"
+      gap={{base:"3rem",md:"5rem"}}
       alignItems={"center"}
       mb="10.5rem"
       backgroundImage={{
@@ -33,10 +33,10 @@ const Getstarted = () => {
         w={{ base: "60%", md: "30%" }}
         gap="1rem"
       >
-        <Text color={"nairagreen"} fontSize="20px">
+        <Text color={"nairagreen"} fontSize="20px" textAlign={"center"}>
           Enjoy Daily and Monthly Giveaways
         </Text>
-        <Text color={"white"} fontSize="md">
+        <Text color={"white"} fontSize="md" textAlign={"center"}>
           Be eligible to enjoy 500% cashback on A.T.M withdrawals. what are you
           waiting for?
         </Text>

@@ -19,7 +19,7 @@ const NavElements = (props) => {
       alignItems="center"
       w={{ base: "max-content" }}
       margin={{ base: "auto", lg: "0" }}
-      pt={{base:"2.5rem", lg:"0"}}
+      pt={{ base: "2.5rem", lg: "0" }}
     >
       <Box
         display={"flex"}
@@ -43,7 +43,7 @@ const NavElements = (props) => {
 
       <Box
         display={"flex"}
-        gap={{base:"2rem", lg:"1rem"}}
+        gap={{ base: "2rem", lg: "1rem" }}
         flexDir={{ base: "column", sm: "column", lg: "row" }}
       >
         <NextLink href="/login" passHref>

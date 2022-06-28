@@ -37,11 +37,13 @@ export default function Home() {
       <Box
         bgColor={"#F7F7F7"}
         display="flex"
+        flexDir={{base:"column", lg:"row"}}
         justifyContent={"center"}
         height="max-content"
         alignItems="center"
         pt={{ base: "4rem", md: "5rem" }}
-        pb={{ base: "4rem", lg: "0" }}
+        pb={{ base: "0rem", lg: "0" }}
+        gap={{base:"2rem", lg:"0"}}
       >
         <Box
           display={"flex"}
@@ -94,9 +96,9 @@ export default function Home() {
                   color="black"
                   borderRadius="md"
                   w={{ base: "max-content", md: "30%" }}
-                  px={{ base: ".5rem" }}
+                  px={{ base: ".6rem" }}
                   boxShadow="md"
-                  h={{base:"fit-content", sm:"2rem"}}
+                  h={{ base: "fit-content", sm: "2rem" }}
                   textAlign={"center"}
                   fontSize="12px"
                   pt=".5rem"
@@ -111,7 +113,7 @@ export default function Home() {
         </Box>
         <Box
           w={{ md: "40%", lg: "50%" }}
-          display={{ base: "none", lg: "block" }}
+          // display={{ base: "none", lg: "block" }}
         >
           <Image src={picture1} alt="picture 1" />
         </Box>
@@ -302,7 +304,7 @@ export default function Home() {
       >
         <Heading
           fontWeight={700}
-          fontSize={{ base: "2rem", lg: "2.5rem" }}
+          fontSize={{ base: "1.6rem", lg: "2.5rem" }}
           fontFamily={"poppins"}
           color="nairablue"
           pb={{ base: "5rem", md: "8rem" }}
@@ -310,7 +312,7 @@ export default function Home() {
         >
           Why Request Cashback?
         </Heading>
-        <Box display={"flex"} flexDir="column" gap={"8rem"}>
+        <Box display={"flex"} flexDir="column" gap={{base:"5rem" ,md:"8rem"}}>
           <Box
             display={"flex"}
             flexDir={{ base: "column", md: "row" }}
@@ -318,7 +320,7 @@ export default function Home() {
             alignItems={"center"}
             gap="1rem"
           >
-            <Box w={{ base: "85%", md: "max-content" }}>
+            <Box w={{ base: "70%", md: "max-content" }}>
               <Image src={reason1} alt="cashback reason" />
             </Box>
 
@@ -345,7 +347,7 @@ export default function Home() {
             alignItems="center"
             gap="1rem"
           >
-            <Box w={{ base: "85%", md: "max-content" }}>
+            <Box w={{ base: "70%", md: "max-content" }}>
               <Image src={reason2} alt="cashback reason" />
             </Box>
             <Box
@@ -372,7 +374,7 @@ export default function Home() {
             alignItems="center"
             gap="1rem"
           >
-            <Box w={{ base: "85%", md: "max-content" }}>
+            <Box w={{ base: "70%", md: "max-content" }}>
               <Image src={reason3} alt="cashback reason" />
             </Box>
             <Box
@@ -398,7 +400,7 @@ export default function Home() {
             alignItems="center"
             gap="1rem"
           >
-            <Box w={{ base: "85%", md: "max-content" }}>
+            <Box w={{ base: "70%", md: "max-content" }}>
               <Image src={reason4} alt="cashback reason" />
             </Box>
             <Box

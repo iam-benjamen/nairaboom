@@ -76,9 +76,9 @@ const Cashout = () => {
           <Clock />
           <Box
             justifyContent={"center"}
-            pt="7.6rem"
+            pt={{base:"5rem", md:"7.6rem"}}
             display={"flex"}
-            gap="4.5rem"
+            gap={{base:"3rem",md:"4.5rem"}}
             w="90%"
             flexWrap={"wrap"}
           >

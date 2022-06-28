@@ -46,7 +46,7 @@ const AboutPage = () => {
         backgroundPosition="right top"
         backgroundRepeat="no-repeat"
       >
-        <Box display={{base:"none", lg:"block"}}>
+        <Box display={{ base: "none", lg: "block" }}>
           <Image src={picture2} alt="homepage second picture" />
         </Box>
 
@@ -92,8 +92,8 @@ const AboutPage = () => {
         backgroundImage={`url(${coil.src})`}
         backgroundPosition="left top"
         backgroundRepeat="no-repeat"
-        pt={{base:"6rem", lg:"10rem"}}
-        pb={{base:"4rem", lg:"9rem"}}
+        pt={{ base: "6rem", lg: "10rem" }}
+        pb={{ base: "4rem", lg: "9rem" }}
         display={"flex"}
         flexDir="row-reverse"
         justifyContent="space-evenly"

@@ -21,7 +21,7 @@ const PlayAsGuest = () => {
         backgroundImage={`url(${coil2.src})`}
         backgroundPosition="right top"
         backgroundRepeat="no-repeat"
-        pt="8rem"
+        pt={{base:"6rem",md:"8rem"}}
         fontFamily={"poppins"}
         display="flex"
         flexDir={"column"}
@@ -52,7 +52,7 @@ const PlayAsGuest = () => {
               alignItems="center"
               display="flex"
               flexWrap={"wrap"}
-              gap="2rem"
+              gap={{base:"0",md:"2rem"}}
               w="95%"
               margin={"auto"}
             >

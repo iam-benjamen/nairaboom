@@ -33,18 +33,21 @@ const ContactPage = () => {
         flexDir={{ base: "column", lg: "row" }}
         justifyContent="center"
         alignItems={"center"}
-        pb="10rem"
+        pb={{ base: "5rem", md: "10rem" }}
         gap="5rem"
       >
         <Box
-          w={{ base: "70%", lg: "30%" }}
+          w={{ base: "75%", lg: "30%" }}
           display={"flex"}
           gap="1.85rem"
           flexDir="column"
           fontFamily={"poppins"}
-          pt="10rem"
+          pt={{ base: "3rem", md: "7rem", lg: "10rem" }}
         >
-          <Image src={ladycalling} alt="contact us" />
+          <Box>
+            <Image src={ladycalling} alt="contact us" />
+          </Box>
+
           <Text fontWeight={500} fontSize="21.22px" color={"nairablue"}>
             Need Help? Reach out to us, We got answers to your questions
           </Text>
