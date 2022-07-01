@@ -20,6 +20,7 @@ import reason3 from "../public/homepage/reason3.svg";
 import reason4 from "../public/homepage/reason4.svg";
 import rightellipse from "../public/navassets/rightellipse.png";
 import leftellipse from "../public/navassets/leftellipse.png";
+import alertdialog from "../public/homepage/alertdialog.png";
 
 export default function Home() {
   const options = [
@@ -37,13 +38,13 @@ export default function Home() {
       <Box
         bgColor={"#F7F7F7"}
         display="flex"
-        flexDir={{base:"column", lg:"row"}}
+        flexDir={{ base: "column", md: "row" }}
         justifyContent={"center"}
         height="max-content"
         alignItems="center"
         pt={{ base: "4rem", md: "5rem" }}
         pb={{ base: "0rem", lg: "0" }}
-        gap={{base:"2rem", lg:"0"}}
+        gap={{ base: "2rem", lg: "0" }}
       >
         <Box
           display={"flex"}
@@ -114,8 +115,12 @@ export default function Home() {
         <Box
           w={{ md: "40%", lg: "50%" }}
           // display={{ base: "none", lg: "block" }}
+          position= "relative"
         >
           <Image src={picture1} alt="picture 1" />
+          <Box w={{base:"10rem",md:"10rem", lg:"max-content"}} position={"absolute"} left={0} top={0}>
+            <Image src={alertdialog} alt="alertdialog"/>
+          </Box>
         </Box>
       </Box>
 
@@ -312,7 +317,11 @@ export default function Home() {
         >
           Why Request Cashback?
         </Heading>
-        <Box display={"flex"} flexDir="column" gap={{base:"5rem" ,md:"8rem"}}>
+        <Box
+          display={"flex"}
+          flexDir="column"
+          gap={{ base: "5rem", md: "8rem" }}
+        >
           <Box
             display={"flex"}
             flexDir={{ base: "column", md: "row" }}
