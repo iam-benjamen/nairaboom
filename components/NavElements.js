@@ -22,7 +22,7 @@ const NavElements = (props) => {
       pt={{ base: "2.5rem", lg: "0" }}
     >
       <Box
-        display={"flex"}
+        display={"-webkit-flex"}
         gap="2.5rem"
         flexDir={{ base: "column", sm: "column", lg: "row" }}
       >
@@ -42,7 +42,7 @@ const NavElements = (props) => {
       </Box>
 
       <Box
-        display={"flex"}
+        display={"-webkit-flex"}
         gap={{ base: "2rem", lg: "1rem" }}
         flexDir={{ base: "column", sm: "column", lg: "row" }}
       >

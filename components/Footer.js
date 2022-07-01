@@ -46,7 +46,7 @@ const FooterComponent = () => {
             <Image src={instagram} alt="instagram logo" />
           </Box>
         </Box>
-        <Text color={"#9E9E9E"}>2022 9ja Cashback. All Right Reserved</Text>
+        <Text color={"#9E9E9E"}>&copy; 2022 Nairaboom. All Right Reserved</Text>
       </Box>
       <Box
         w={{ base: "85%", md: "max-content" }}
